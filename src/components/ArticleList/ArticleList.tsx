@@ -3,7 +3,6 @@ import { useAppDispatch, useAppSelector } from '../../Redux/store';
 import { NormalizedArticle } from '../../types/Article';
 import { ArticleInfo } from '../ArticleInfo/ArticleInfo';
 import './ArticleList.scss';
-import { resetFilteredArticles } from '../../Redux/Slices/filteredArticles.slice';
 import { resetArticlesState, setArticlesState } from '../../Redux/Slices/articlesState.slice';
 
 type Props = {
@@ -19,10 +18,6 @@ export const ArticleList: React.FC<Props> = ({ articles }) => {
     dispatch(resetArticlesState());
     dispatch(setArticlesState(articles));
   }, [articles]);
-
-  useEffect(() => {
-    dispatch(resetFilteredArticles());
-  }, [pinnedArticle, dispatch]);
 
   let filteredArticles = articlesState;
 
