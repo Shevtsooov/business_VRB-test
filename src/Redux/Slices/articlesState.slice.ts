@@ -17,7 +17,13 @@ export const articlesStateSlice = createSlice({
       state.value = action.payload;
     },
     addArticleToState: (state, action) => {
-      state.value = [ action.payload, ...state.value  ];
+      if (state.value) {
+        state.value = [ action.payload, ...state.value  ];
+
+        return;
+      }
+
+      state.value = [ action.payload ];
     },
     filterArticlesState: (state, action) => {
       state.value = state.value.filter((article) => article.title !== action.payload.title);

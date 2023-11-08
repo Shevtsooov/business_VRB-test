@@ -6,7 +6,7 @@ import './ArticleList.scss';
 import { resetArticlesState, setArticlesState } from '../../Redux/Slices/articlesState.slice';
 
 type Props = {
-  articles: NormalizedArticle[];
+  articles: NormalizedArticle[] | undefined;
 }; 
 
 export const ArticleList: React.FC<Props> = ({ articles }) => {
@@ -24,7 +24,7 @@ export const ArticleList: React.FC<Props> = ({ articles }) => {
   if (pinnedArticle) {
     filteredArticles = articlesState.filter(article => article.title !== pinnedArticle.title);
   }
-
+  
   return (
     <div className="articleList">
 
@@ -35,7 +35,7 @@ export const ArticleList: React.FC<Props> = ({ articles }) => {
         />
       )}
 
-      {filteredArticles.map(article => (
+      {filteredArticles?.map(article => (
         <ArticleInfo
           article={article}
           key={article.title}

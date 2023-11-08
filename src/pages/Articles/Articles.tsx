@@ -12,7 +12,7 @@ export const Articles = () => {
 
   const query = useAppSelector(state => state.query.value);
   const isModalOpen = useAppSelector(state => state.isModalOpen.value);
-
+  const articlesState = useAppSelector(state => state.articlesState.value);
   const dispatch = useAppDispatch();
   
   const { data, refetch} = useFindArticlesQuery({
@@ -44,7 +44,9 @@ export const Articles = () => {
 
   const showMore = () => {
     setPageSize(state => state + 10)
-  }
+  };
+
+  console.log('articlesState - ', articlesState);
 
   return (
     <div className='articlesPage'>
@@ -67,7 +69,7 @@ export const Articles = () => {
       
       <Filter />
 
-      {data && <ArticleList articles={data.articles} />}
+      <ArticleList articles={data?.articles} />
 
       <button
         className='articlesPage__more'
