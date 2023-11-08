@@ -1,6 +1,8 @@
 ## The following technologies were used in this test-task:
 
 - React;
+- Redux ToolKit;
+- RTK Query;
 - React Router DOM;
 - Typescript;
 - Classnames;
