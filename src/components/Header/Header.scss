@@ -1,0 +1,10 @@
+@import "../../styles/utils/colors.scss";
+
+.header {
+  padding: 5px 80px;
+  background-color: $grey-bg;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+}

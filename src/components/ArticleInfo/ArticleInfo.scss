@@ -1,0 +1,97 @@
+@import "../../styles/utils/colors.scss";
+
+.article {
+  position: relative;
+
+  padding: 10px;
+  
+  width: 300px;
+
+  background-color: $grey-bg;
+
+  &--hidden {
+    display: none;
+  }
+
+  &__buttons {
+    display: none;
+
+    &--active {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+  
+      display: flex;
+      gap: 10px;
+    }
+  }
+
+  &__button {
+    width: 30px;
+    height: 30px;
+
+    border: 0;
+    border-radius: 30px;
+
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: 50% 50%;
+
+    &--pin {
+      background-image: url('../../assets/icons/pin.svg');
+      background-color: $main-green;
+
+      &:hover {
+        background-color: $main-green-hv;
+      }
+    }
+
+    &--unpin {
+      background-image: url('../../assets/icons/unpin.svg');
+      background-color: $grey-bg;
+
+      &:hover {
+        background-color: $grey-bg-hv;
+      }
+    }
+
+    &--remove {
+      background-image: url('../../assets/icons/delete.svg');
+      background-color: $main-red;
+
+      &:hover {
+        background-color: $main-red-hv;
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    font-size: 16px;
+
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    font-size: 12px;
+
+    margin-bottom: 40px;
+  }
+
+  &__author {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+
+    font-size: 12px;
+    font-weight: 600;
+    
+    text-align: right;
+  }
+}
