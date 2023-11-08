@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useFindArticlesQuery } from '../../Redux/RTK_Query/articles.service';
-import { Filter } from '../../components/ActicleButtons/Filter';
+import { Filter } from '../../components/Filter/Filter';
 import { ArticleList } from '../../components/ArticleList/ArticleList';
 import './Articles.scss';
 import { NewArticleModal } from '../../components/NewArticleModal/NewArticleModal';

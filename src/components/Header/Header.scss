@@ -1,10 +1,19 @@
 @import "../../styles/utils/colors.scss";
+@import "../../styles/utils/mixins.scss";
 
 .header {
-  padding: 5px 80px;
-  background-color: $grey-bg;
-  height: 60px;
-
   display: flex;
+  padding: 5px 20px;
+  height: 60px;
+  
   align-items: center;
+  background-color: $grey-bg;
+
+  &__title {
+    font-size: 24px;
+
+    @include onTablet {
+      font-size: 28px;
+    }
+  }
 }

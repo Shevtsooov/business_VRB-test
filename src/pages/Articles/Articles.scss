@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: center;
 
-  padding: 40px;
+  padding: 40px 0;
 
   &__blur {
     position: absolute;
@@ -24,7 +24,9 @@
   &__add {
     position: fixed;
     bottom: 60px;
-    right: 120px;
+    right: 60px;
+
+    z-index: 1;
 
     width: 60px;
     height: 60px;
