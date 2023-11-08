@@ -68,7 +68,6 @@ export const Articles = () => {
       <Filter />
 
       {data && <ArticleList articles={data.articles} />}
-      {/* <ArticleList /> */}
 
       <button
         className='articlesPage__more'
